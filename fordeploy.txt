@@ -1,0 +1,17 @@
+{
+  "name": "usar-placement-portal",
+  "version": "1.0.0",
+  "description": "USAR Placement Portal",
+  "scripts": {
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "start-backend": "cd backend && npm start",
+    "start": "cd backend && npm start",
+    "build": "cd frontend && npm run build",
+    "postinstall": "npm run install-frontend && npm run install-backend"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
