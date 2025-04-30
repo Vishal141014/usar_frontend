@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Set base URL for API calls
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'https://usar-backend.onrender.com/api',
 });
 
 // Add authorization header to requests if token exists
