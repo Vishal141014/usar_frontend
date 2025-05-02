@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getImagePath } from '../utils/imageUtils';
+import { FaGraduationCap } from 'react-icons/fa';
+// import { getImagePath } from '../utils/imageUtils';
 
 const WelcomeAnimation = ({ onAnimationComplete }) => {
   const [currentText, setCurrentText] = useState(0);
@@ -14,16 +15,16 @@ const WelcomeAnimation = ({ onAnimationComplete }) => {
   ];
   
   useEffect(() => {
-    // Change text every second
+    // Change text every 0.75 seconds to fit within 3 second timeline
     const textInterval = setInterval(() => {
       setFadeOut(true);
       setTimeout(() => {
         setCurrentText((prev) => (prev + 1) % welcomeTexts.length);
         setFadeOut(false);
-      }, 500);
-    }, 1000);
+      }, 375);
+    }, 750);
     
-    // After 3 seconds, show the logo animation
+    // After 2.25 seconds, show the logo animation
     const logoTimeout = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => {
@@ -31,21 +32,21 @@ const WelcomeAnimation = ({ onAnimationComplete }) => {
         // Start logo zoom animation
         setLogoZoom(true);
         
-        // After 1 second of logo animation, complete the animation sequence
+        // After 0.75 seconds of logo animation, complete the animation sequence
         setTimeout(() => {
           if (onAnimationComplete) {
             onAnimationComplete();
           }
-        }, 1000);
-      }, 500);
-    }, 3000);
+        }, 750);
+      }, 375);
+    }, 2250);
     
     return () => {
       clearInterval(textInterval);
       clearTimeout(logoTimeout);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onAnimationComplete]); // welcomeTexts.length is static, so we can disable this warning
+  }, [onAnimationComplete]);
   
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-gradient-to-br from-pink via-teal to-lightblue">
@@ -69,11 +70,9 @@ const WelcomeAnimation = ({ onAnimationComplete }) => {
               logoZoom ? 'scale-150 opacity-100' : 'scale-100 opacity-0'
             }`}
           >
-            <img 
-              src={getImagePath('logo.png')} 
-              alt="USAR Logo" 
-              className="w-40 h-40 object-contain"
-            />
+            <div className="text-white text-8xl">
+              <FaGraduationCap />
+            </div>
           </div>
         )}
       </div>
