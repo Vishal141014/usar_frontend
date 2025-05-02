@@ -4,6 +4,7 @@ import { FaGraduationCap, FaBuilding, FaFileAlt, FaChartLine } from 'react-icons
 import ImageSlider from '../components/ImageSlider';
 import WelcomeAnimation from '../components/WelcomeAnimation';
 import PlacementHighlights from '../components/PlacementHighlights';
+import CompanyLogoSlider from '../components/CompanyLogoSlider';
 import { getImagePath } from '../utils/imageUtils';
 
 const HomePage = () => {
@@ -171,55 +172,8 @@ const HomePage = () => {
           </div>
         </div>
         
-        {/* Featured Placements */}
-        <div className="py-12 bg-lightgray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold" style={{ color: '#1995AD' }}>Our Featured Placements</h2>
-              <p className="mt-2 text-xl text-gray-600">
-                Success stories from our campus
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow transform hover:scale-105 duration-300">
-                <div className="h-48 bg-gradient-to-r from-teal to-lightblue flex items-center justify-center">
-                  <div className="text-white text-5xl font-bold animate-pulse">Amazon</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1995AD' }}>Amazon</h3>
-                  <p className="text-gray-700 mb-4">3 Students placed with packages up to 18 LPA</p>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow transform hover:scale-105 duration-300">
-                <div className="h-48 bg-gradient-to-r from-pink to-red flex items-center justify-center">
-                  <div className="text-white text-5xl font-bold animate-pulse">Microsoft</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1995AD' }}>Microsoft</h3>
-                  <p className="text-gray-700 mb-4">5 Students placed with packages up to 22 LPA</p>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow transform hover:scale-105 duration-300">
-                <div className="h-48 bg-gradient-to-r from-lightblue to-teal flex items-center justify-center">
-                  <div className="text-white text-5xl font-bold animate-pulse">Google</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1995AD' }}>Google</h3>
-                  <p className="text-gray-700 mb-4">2 Students placed with packages up to 25 LPA</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center mt-10">
-              <Link to="/placements" className="btn-primary hover:scale-105 transition-transform" style={{ backgroundColor: '#F52549', color: '#F1F1F2' }}>
-                View All Placements
-              </Link>
-            </div>
-          </div>
-        </div>
+        {/* Company Logo Slider */}
+        <CompanyLogoSlider />
         
         {/* Contact Info */}
         <div className="py-12 bg-white">
