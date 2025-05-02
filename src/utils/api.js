@@ -60,24 +60,24 @@ export const refreshAuthToken = async () => {
 };
 
 // Authentication API calls
-export const login = (formData) => API.post('/auth/login', formData);
+export const login = (formData) => API.post('/api/auth/login', formData);
 
 // Placements API calls
-export const fetchPlacements = () => API.get('/placements');
-export const fetchPlacementById = (id) => API.get(`/placements/${id}`);
-export const createPlacement = (placementData) => API.post('/placements', placementData);
-export const updatePlacement = (id, placementData) => API.put(`/placements/${id}`, placementData);
-export const deletePlacement = (id) => API.delete(`/placements/${id}`);
+export const fetchPlacements = () => API.get('/api/placements');
+export const fetchPlacementById = (id) => API.get(`/api/placements/${id}`);
+export const createPlacement = (placementData) => API.post('/api/placements', placementData);
+export const updatePlacement = (id, placementData) => API.put(`/api/placements/${id}`, placementData);
+export const deletePlacement = (id) => API.delete(`/api/placements/${id}`);
 
 // Companies API calls
-export const fetchCompanies = () => API.get('/companies');
-export const fetchCompanyById = (id) => API.get(`/companies/${id}`);
-export const createCompany = (companyData) => API.post('/companies', companyData);
-export const updateCompany = (id, companyData) => API.put(`/companies/${id}`, companyData);
-export const deleteCompany = (id) => API.delete(`/companies/${id}`);
+export const fetchCompanies = () => API.get('/api/companies');
+export const fetchCompanyById = (id) => API.get(`/api/companies/${id}`);
+export const createCompany = (companyData) => API.post('/api/companies', companyData);
+export const updateCompany = (id, companyData) => API.put(`/api/companies/${id}`, companyData);
+export const deleteCompany = (id) => API.delete(`/api/companies/${id}`);
 
 // Contact API calls
-export const fetchContacts = () => API.get('/contacts');
-export const fetchContactById = (id) => API.get(`/contacts/${id}`);
-export const createContact = (contactData) => API.post('/contacts', contactData);
-export const deleteContact = (id) => API.delete(`/contacts/${id}`); 
+export const fetchContacts = () => API.get('/api/contacts');
+export const fetchContactById = (id) => API.get(`/api/contacts/${id}`);
+export const createContact = (contactData) => API.post('/api/contacts', contactData);
+export const deleteContact = (id) => API.delete(`/api/contacts/${id}`); 
