@@ -80,8 +80,4 @@ export const deleteCompany = (id) => API.delete(`/api/companies/${id}`);
 export const fetchContacts = () => API.get('/api/contacts');
 export const fetchContactById = (id) => API.get(`/api/contacts/${id}`);
 export const createContact = (contactData) => API.post('/api/contacts', contactData);
-<<<<<<< HEAD
-export const deleteContact = (id) => API.delete(`/api/contacts/${id}`); 
-=======
-export const deleteContact = (id) => API.delete(`/api/contacts/${id}`); 
->>>>>>> 5882040819b922f1fb9b9b9422ba1de8b768c6d7
+export const deleteContact = (id) => API.delete(`/api/contacts/${id}`);
